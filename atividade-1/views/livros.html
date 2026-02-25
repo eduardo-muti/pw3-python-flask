@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Games - Produto</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #0f0f0f, #1a1a2e);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Card do produto */
+.card {
+    background: #141428;
+    width: 350px;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 20px #00ffcc33;
+    transition: 0.3s;
+    margin-right: 2rem;
+    
+}
+
+.card:hover {
+    box-shadow: 0 0 25px #00ffcc88;
+}
+
+/* Imagem */
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Título */
+.titulo {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #00ffcc;
+}
+
+/* Avaliação */
+.avaliacao {
+    color: #00ffcc;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Preços */
+.preco-antigo {
+    text-decoration: line-through;
+    color: #777;
+    font-size: 14px;
+}
+
+.preco-atual {
+    font-size: 26px;
+    font-weight: bold;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
+}
+
+.desconto {
+    background: #00ffcc22;
+    color: #00ffcc;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 13px;
+    margin-left: 8px;
+}
+
+/* Frete */
+.frete {
+    margin: 15px 0;
+    background: #00ffcc22;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Botão */
+.botao {
+    width: 100%;
+    padding: 12px;
+    background: #00ffcc;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background: #00cca3;
+    box-shadow: 0 0 15px #00ffcc;
+}
+
+</style>
+</head>
+<body>
+
+<div class="card">
+    <img src="https://via.placeholder.com/350x400" alt="Produto">
+
+    <div class="titulo">
+        The Omniscient Reader's viewpoint
+    </div>
+
+    <div class="avaliacao">
+        
+         5.0 | 400 mil vendidos
+    </div>
+
+    <div class="preco-antigo">
+        R$ 129,40
+    </div>
+
+    <div>
+        <span class="preco-atual">R$ 129,40 </span>
+        <span class="desconto">nenhum desconto hoje</span>
+    </div>
+
+    <div class="frete">
+         Frete grátis hoje
+    </div>
+
+    <button class="botao">Comprar Agora</button>
+</div>
+
+<div class="card">
+    <img src="https://via.placeholder.com/350x400" alt="Produto_2">
+
+    <div class="titulo">
+       the beginning after the end
+    </div>
+
+    <div class="avaliacao">
+        
+         3.5 | 20 mil vendidos
+    </div>
+
+    <div class="preco-antigo">
+        R$ 100,40
+    </div>
+
+    <div>
+        <span class="preco-atual">R$ 100,40 </span>
+        <span class="desconto">nenhum desconto hoje</span>
+    </div>
+
+    <div class="frete">
+      R$ 50,00 Frete
+    </div>
+
+    <button class="botao">Comprar Agora</button>
+</div>
+
+
+<div class="card">
+    <img src="https://via.placeholder.com/350x400" alt="Produto_3">
+
+    <div class="titulo">
+      yotsuba koiwai
+    </div>
+
+    <div class="avaliacao">
+        
+         4.0 | 50 mil vendidos
+    </div>
+
+    <div class="preco-antigo">
+        R$ 144,40
+    </div>
+
+    <div>
+        <span class="preco-atual">R$ 122,00 </span>
+        <span class="desconto">R$22,40 de Desconto</span>
+    </div>
+
+    <div class="frete">
+      R$ 2,00 Frete
+    </div>
+
+    <button class="botao">Comprar Agora</button>
+</div>
+</body>
+</html>

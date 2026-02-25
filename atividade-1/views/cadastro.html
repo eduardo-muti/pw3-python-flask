@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Games - Cadastro de Livro</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #0f0f0f, #1a1a2e);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Card do formulário */
+.form-card {
+    background: #141428;
+    width: 400px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #00ffcc33;
+}
+
+.form-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/* Inputs */
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #00ffcc55;
+    background: #1f1f3a;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #00ffcc;
+    box-shadow: 0 0 8px #00ffcc;
+}
+
+/* Botão */
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: #00ffcc;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #00cca3;
+    box-shadow: 0 0 15px #00ffcc;
+}
+
+</style>
+</head>
+<body>
+
+<div class="form-card">
+    <h2>Cadastro de Livro</h2>
+
+    <form>
+        <label>Nome do Livro</label>
+        <input type="text" placeholder="Digite o nome do livro">
+
+        <label>Autor</label>
+        <input type="text" placeholder="Digite o autor">
+
+        <label>Preço</label>
+        <input type="number" placeholder="Digite o preço">
+
+        <label>Descrição</label>
+        <textarea rows="3" placeholder="Digite a descrição"></textarea>
+
+        <label>Imagem do Livro</label>
+        <input type="file">
+
+        <button type="submit">Cadastrar Livro</button>
+    </form>
+</div>
+
+</body>
+</html>
