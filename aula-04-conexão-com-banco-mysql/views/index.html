@@ -1,0 +1,18 @@
+<!-- importando template / -->
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main>
+
+<h1>bem vindo ao the games</h1>
+<h3>seu site favorito de jogos</h3>
+<hr>
+<!-- <p><a href="/games">games</a></p>
+<p><a href="/console">console</a></p> -->
+<hr>
+<img src="{{url_for('static',filename='imgs/games.webp')}}" alt="The games" width="720px">
+
+</main>
+
+{% endblock content %}
