@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main>
+
+<h1>jogos em destaque</h1>
+<hr>
+<ul>
+<li>Título: {{ titulo }}</li>
+<li>Ano: {{ ano }}</li>
+<li>Categoria: {{ categoria }}</li>
+</ul>
+<p>o jogo {{titulo}} tem {{2026 - ano}} ano.</p>
+
+<h3>Top Players - ranking</h3>
+
+<ol>
+    {% for jogador in jogadores %}
+    <li>{{jogador}}</li>
+    {% endfor %}
+</ol>
+
+
+
+
+
+<p><a href="/">voltar</a></p>
+</main>
+
+{% endblock content %}
