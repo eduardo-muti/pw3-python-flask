@@ -1,0 +1,33 @@
+
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+<body>
+
+<div class="form-card">
+    <h2>Cadastro de Livro</h2>
+
+    <form>
+        <label>Nome do Livro</label>
+        <input type="text" placeholder="Digite o nome do livro">
+
+        <label>Autor</label>
+        <input type="text" placeholder="Digite o autor">
+
+        <label>Preço</label>
+        <input type="number" placeholder="Digite o preço">
+
+        <label>Descrição</label>
+        <textarea rows="3" placeholder="Digite a descrição"></textarea>
+
+        <label>Imagem do Livro</label>
+        <input type="file">
+
+        <button type="submit">Cadastrar Livro</button>
+    </form>
+</div>
+
+</body>
+</html>
