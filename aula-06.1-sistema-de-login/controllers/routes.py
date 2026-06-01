@@ -1,5 +1,5 @@
-from flask import render_template, request, redirect, url_for
-
+from flask import render_template, request, redirect, url_for, flash
+from markupsafe import Markup
 from models.database import Game, db, Console, Usuario
 from werkzeug.security import generate_password_hash
 
@@ -146,13 +146,22 @@ def init_app(app):
         if request.method == "POST":
             email = request.form['email']
             senha = request.form['senha']
+            usuario = Usuario.query.filter_by(email=email).first()
+            if usuario:
+                msg = Markup("Usuario já cadastro. faça o <a href='/login'>login</a>")
+                flash(msg, 'danger')
+                return redirect(url_for('cadastro'))
+            
             senha_criptografada = generate_password_hash(senha, method='scrypt')
             novo_usuario = Usuario(email=email, senha=senha_criptografada)
             db.session.add(novo_usuario)
             db.session.commit() 
-            return redirect(url_for('login'))       
+            msgCad = Markup("Cadastro realisado com sucesso! Faça o <a hef='/login'>login</a>")
+            flash(msgCad, 'success')
+            return redirect(url_for('cadastro'))      
         return render_template('cadastro.html')
 
     @app.route('/login', methods=['GET', 'POST'])
     def login():
-        return "bem-vindo a página de login!"
+        return render_template('login.html')
+    

@@ -12,6 +12,8 @@ DB_NAME = 'thegames'
 app.config['DATABASE_NAME'] = DB_NAME
 app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql://root@localhost/{DB_NAME}'
 
+app.config['SECRET_KEY'] = 'meusegrdo'
+
 # Enviando a variavel app para as rotas
 routes.init_app(app)
 
